@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+const boldFont = localFont({
+  src: "./fonts/kimm_bold.ttf",
+  variable: "--font-bold",
+  display: "swap",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+const lightFont = localFont({
+  src: "./fonts/jamsil_Light.ttf",
+  variable: "--font-light",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -22,10 +24,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+    <html
+      className={`${boldFont.variable} ${lightFont.variable} ${lightFont.className}`}
+      lang="en"
+    >
+      <body>{children}</body>
     </html>
   );
 }

@@ -13,6 +13,16 @@ export default defineConfig({
   // Useful for theme customization
   theme: {
     extend: {},
+    tokens: {
+      fonts: {
+        bold: { value: "var(--font-bold)" },
+        light: { value: "var(--font-light)" },
+      },
+    },
+  },
+  globalVars: {
+    "var(--font-bold)": "boldFont, boldFont Fallback",
+    "var(--font-light)": "lightFont,lightFont Fallback",
   },
 
   // The output directory for your css system
