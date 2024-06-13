@@ -18,6 +18,32 @@ export default defineConfig({
         bold: { value: "var(--font-bold)" },
         light: { value: "var(--font-light)" },
       },
+      colors: {
+        darkGray: {
+          value: "#323D41",
+          description: "배경색",
+        },
+        yellow: {
+          value: "#FCF893",
+          deprecated: "로고색",
+        },
+        ivory: {
+          value: "#FDFCF7",
+          description: "내용색",
+        },
+        gray: {
+          value: "#A7A7A7",
+          description: "클릭색",
+        },
+        warning: {
+          value: "#E13B36",
+          description: "경고색",
+        },
+        success: {
+          value: "#00CD2D",
+          description: "성공색",
+        },
+      },
     },
   },
   globalVars: {

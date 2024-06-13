@@ -21,6 +21,7 @@ export default function Home() {
           fontFamily: "bold",
           // fontSize: "18px",/
           // fontWeight: 700,
+          color: "yellow",
         })}
       >
         개발자 준비중인데
