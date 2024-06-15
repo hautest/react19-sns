@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { css } from "../../styled-system/css";
+import SvgHome from "@/common/icons/Home";
 
 export default function Home() {
   return (
@@ -26,6 +26,7 @@ export default function Home() {
       >
         개발자 준비중인데
       </div>
+      <SvgHome className={css({ width: "10rem", height: "10rem" })} />
     </div>
   );
 }

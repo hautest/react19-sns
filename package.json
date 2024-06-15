@@ -7,7 +7,8 @@
     "dev": "rm -rf .next && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "svgr": "npx @svgr/cli --typescript --no-index --jsx-runtime automatic --out-dir ./src/common/icons -- ./src/common/icons/assets"
   },
   "dependencies": {
     "next": "15.0.0-rc.0",
@@ -16,6 +17,7 @@
   },
   "devDependencies": {
     "@pandacss/dev": "^0.40.1",
+    "@svgr/cli": "^8.1.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
