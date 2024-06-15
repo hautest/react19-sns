@@ -6,6 +6,8 @@ export default defineConfig({
 
   // Where to look for your css declarations
   include: ["./src/**/*.{js,jsx,ts,tsx}"],
+  jsxStyleProps: "minimal",
+  jsxFramework: "react",
 
   // Files to exclude
   exclude: [],
@@ -14,6 +16,16 @@ export default defineConfig({
   theme: {
     extend: {},
     tokens: {
+      sizes: {
+        full: {
+          value: "100%",
+        },
+      },
+      spacing: {
+        full: {
+          value: "100%",
+        },
+      },
       fonts: {
         bold: { value: "var(--font-bold)" },
         light: { value: "var(--font-light)" },

@@ -1,3 +1,4 @@
+import { Button } from "@/common/ui/Button";
 import { css } from "../../styled-system/css";
 import SvgHome from "@/common/icons/Home";
 
@@ -26,6 +27,11 @@ export default function Home() {
       >
         개발자 준비중인데
       </div>
+      <Button color="black">123</Button>
+      <Button color="yellow">123</Button>
+      <Button size="medium">123</Button>
+      <Button size="small">123</Button>
+      <Button>123</Button>
       <SvgHome className={css({ width: "10rem", height: "10rem" })} />
     </div>
   );
