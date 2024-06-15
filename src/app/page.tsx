@@ -1,6 +1,7 @@
 import { Button } from "@/common/ui/Button";
 import { css } from "../../styled-system/css";
 import SvgHome from "@/common/icons/Home";
+import { Input } from "@/common/ui/Input";
 
 export default function Home() {
   return (
@@ -27,6 +28,9 @@ export default function Home() {
       >
         개발자 준비중인데
       </div>
+      <Input placeholder="test" rightNode={<div>123</div>} />
+      <Input size="small" rightNode={<div>123</div>} />
+      <Input variants="outline" />
       <Button color="black">123</Button>
       <Button color="yellow">123</Button>
       <Button size="medium">123</Button>
