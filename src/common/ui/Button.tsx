@@ -1,6 +1,7 @@
-import { styled } from "../../../styled-system/jsx";
+import { ButtonHTMLAttributes } from "react";
+import { RecipeVariantProps, cva, cx } from "../../../styled-system/css";
 
-export const Button = styled("button", {
+export const buttonCva = cva({
   base: {
     borderRadius: "2rem",
     "&:hover": {
@@ -52,3 +53,12 @@ export const Button = styled("button", {
     size: "large",
   },
 });
+
+type ButtonProps = RecipeVariantProps<typeof buttonCva> &
+  ButtonHTMLAttributes<HTMLButtonElement>;
+
+export const Button = ({ className, size, color, ...rest }: ButtonProps) => {
+  return (
+    <button {...rest} className={cx(buttonCva({ size, color }), className)} />
+  );
+};

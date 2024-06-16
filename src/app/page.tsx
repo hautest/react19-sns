@@ -2,10 +2,8 @@
 
 import { Button } from "@/common/ui/Button";
 import { css } from "../../styled-system/css";
-import SvgHome from "@/common/icons/Home";
 import { Input } from "@/common/ui/Input";
 import { Modal } from "@/common/ui/Modal/Modal";
-import { useState } from "react";
 
 export default function Home() {
   return (
