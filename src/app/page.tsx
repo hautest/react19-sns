@@ -1,7 +1,11 @@
+"use client";
+
 import { Button } from "@/common/ui/Button";
 import { css } from "../../styled-system/css";
 import SvgHome from "@/common/icons/Home";
 import { Input } from "@/common/ui/Input";
+import { Modal } from "@/common/ui/Modal/Modal";
+import { useState } from "react";
 
 export default function Home() {
   return (
@@ -36,7 +40,15 @@ export default function Home() {
       <Button size="medium">123</Button>
       <Button size="small">123</Button>
       <Button>123</Button>
-      <SvgHome className={css({ width: "10rem", height: "10rem" })} />
+      <Modal>
+        <Modal.Trigger>열기</Modal.Trigger>
+        <Modal.Portal>
+          <Modal.Overlay />
+          <Modal.Content className={css({ height: "10rem", width: "10rem" })}>
+            <Modal.Close>닫기</Modal.Close>
+          </Modal.Content>
+        </Modal.Portal>
+      </Modal>
     </div>
   );
 }

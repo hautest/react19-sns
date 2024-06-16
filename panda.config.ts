@@ -129,6 +129,9 @@ export default defineConfig({
       "-o-user-drag": "none",
       "user-drag": "none",
     },
+    ".no-scroll": {
+      overflow: "hidden",
+    },
   }),
 
   // The output directory for your css system
