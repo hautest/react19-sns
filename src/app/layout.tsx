@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { css } from "../../styled-system/css";
 import { flex } from "../../styled-system/patterns";
-import { MAX_WIDTH } from "@/common/ui/constants";
 
 const boldFont = localFont({
   src: "./fonts/kimm_bold.ttf",
@@ -42,7 +41,7 @@ export default function RootLayout({
         <div
           className={css({
             bg: "darkGray",
-            maxWidth: MAX_WIDTH,
+            maxWidth: "maxWidth",
             w: "full",
             h: "full",
           })}

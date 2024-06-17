@@ -20,6 +20,9 @@ export default defineConfig({
         full: {
           value: "100%",
         },
+        maxWidth: {
+          value: "60rem",
+        },
       },
       spacing: {
         full: {

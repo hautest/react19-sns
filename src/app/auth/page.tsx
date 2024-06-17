@@ -11,7 +11,7 @@ export default function AuthPage() {
         left: "50%",
         top: "50%",
         transform: "translate(-50%, -50%)",
-        maxWidth: MAX_WIDTH,
+        maxWidth: "maxWidth",
         width: "full",
         px: "2.9rem",
         direction: "column",
