@@ -1,4 +1,8 @@
-import { defineConfig, defineGlobalStyles } from "@pandacss/dev";
+import {
+  defineConfig,
+  defineGlobalStyles,
+  defineTextStyles,
+} from "@pandacss/dev";
 
 export default defineConfig({
   // Whether to use css reset
@@ -14,7 +18,58 @@ export default defineConfig({
 
   // Useful for theme customization
   theme: {
-    extend: {},
+    extend: {
+      textStyles: defineTextStyles({
+        size25weight700bold: {
+          value: {
+            fontSize: "2.5rem",
+            fontWeight: "700",
+            fontFamily: "bold",
+            lineHeight: "2.625rem",
+          },
+        },
+        size15weight700bold: {
+          value: {
+            fontSize: "1.5rem",
+            fontWeight: "700",
+            fontFamily: "bold",
+            lineHeight: "1.575rem",
+          },
+        },
+        size18weight700bold: {
+          value: {
+            fontSize: "1.8rem",
+            fontWeight: "700",
+            fontFamily: "bold",
+            lineHeight: "1.89rem",
+          },
+        },
+        size13weight300light: {
+          value: {
+            fontSize: "1.3rem",
+            fontWeight: "300",
+            fontFamily: "light",
+            lineHeight: "1.43rem",
+          },
+        },
+        size10weight700bold: {
+          value: {
+            fontSize: "1rem",
+            fontWeight: "700",
+            fontFamily: "bold",
+            lineHeight: "1.05rem",
+          },
+        },
+        size6weight700bold: {
+          value: {
+            fontSize: "0.6rem",
+            fontWeight: "700",
+            fontFamily: "bold",
+            lineHeight: "0.63rem",
+          },
+        },
+      }),
+    },
     tokens: {
       sizes: {
         full: {
@@ -61,6 +116,7 @@ export default defineConfig({
       },
     },
   },
+  minify: true,
   globalVars: {
     "var(--font-bold)": "boldFont, boldFont Fallback",
     "var(--font-light)": "lightFont,lightFont Fallback",
