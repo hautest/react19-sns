@@ -1,4 +1,3 @@
-import { MAX_WIDTH } from "@/common/ui/constants";
 import { css } from "../../../styled-system/css";
 import { flex } from "../../../styled-system/patterns";
 import { LinkButton } from "@/common/ui/LinkButton";
@@ -18,16 +17,14 @@ export default function AuthPage() {
         gap: "3.6rem",
       })}
     >
-      <p
+      <h1
         className={css({
-          fontSize: "2.5rem",
-          fontWeight: "700",
-          fontFamily: "bold",
+          textStyle: "size25weight700bold",
           color: "yellow",
         })}
       >
         print(“Hello 갭잘알”)
-      </p>
+      </h1>
       <div className={flex({ direction: "column", gap: "2.4rem" })}>
         <LinkButton href="/auth/sign-in">로그인</LinkButton>
         <LinkButton href="/auth/sign-up">회원가입</LinkButton>
