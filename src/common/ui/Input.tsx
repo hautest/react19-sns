@@ -1,8 +1,7 @@
-import { InputHTMLAttributes, ReactNode } from "react";
-import { styled } from "../../../styled-system/jsx";
-import { StyledVariantProps } from "../../../styled-system/types";
+import { HTMLAttributes, InputHTMLAttributes, ReactNode } from "react";
+import { cva, cx, RecipeVariantProps } from "../../../styled-system/css";
 
-const StyledInput = styled("input", {
+const inputCva = cva({
   base: {
     bg: "white",
     w: "full",
@@ -41,7 +40,7 @@ const StyledInput = styled("input", {
   },
 });
 
-const InputContainer = styled("div", {
+const inputContainerCva = cva({
   base: {
     display: "flex",
     alignItems: "center",
@@ -66,17 +65,33 @@ const InputContainer = styled("div", {
   },
 });
 
-export interface InputProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, "size">,
-    StyledVariantProps<typeof StyledInput> {
-  rightNode?: ReactNode;
-}
+export type InputProps = RecipeVariantProps<typeof inputCva> &
+  InputHTMLAttributes<HTMLInputElement> & {
+    rightNode?: ReactNode;
+    containerProps?: HTMLAttributes<HTMLDivElement>;
+  };
 
-export const Input = ({ rightNode, size, variants, ...rest }: InputProps) => {
+export const Input = ({
+  rightNode,
+  size,
+  variants,
+  className,
+  containerProps,
+  ...rest
+}: InputProps) => {
+  const { className: containerClassName, ...containerPropsRest } =
+    containerProps || {};
+
   return (
-    <InputContainer variants={variants}>
-      <StyledInput size={size} variants={variants} {...rest} />
+    <div
+      className={cx(inputContainerCva({ variants }), containerClassName)}
+      {...containerPropsRest}
+    >
+      <input
+        className={cx(inputCva({ size, variants }), className)}
+        {...rest}
+      />
       {rightNode}
-    </InputContainer>
+    </div>
   );
 };

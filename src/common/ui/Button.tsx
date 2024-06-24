@@ -4,7 +4,7 @@ import { RecipeVariantProps, cva, cx } from "../../../styled-system/css";
 export const buttonCva = cva({
   base: {
     borderRadius: "2rem",
-    "&:hover": {
+    "&:disabled": {
       bg: "gray",
     },
     fontFamily: "bold",
@@ -44,7 +44,7 @@ export const buttonCva = cva({
         lineHeight: "1.57rem",
         fontWeight: "700",
         py: "1.4rem",
-        w: "9.8rem",
+        w: "fit-content",
       },
     },
   },
