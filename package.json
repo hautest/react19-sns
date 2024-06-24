@@ -19,11 +19,15 @@
     "@pandacss/dev": "^0.40.1",
     "@svgr/cli": "^8.1.0",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "npm:types-react@rc",
+    "@types/react-dom": "npm:types-react-dom@rc",
     "babel-plugin-react-compiler": "0.0.0-experimental-938cd9a-20240601",
     "eslint": "^8",
     "eslint-config-next": "15.0.0-rc.0",
     "typescript": "^5"
+  },
+  "overrides": {
+    "@types/react": "npm:types-react@rc",
+    "@types/react-dom": "npm:types-react-dom@rc"
   }
 }
